@@ -1,16 +1,17 @@
 {
   "name": "application-name",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "3.0.3",
-    "jade": "*"
+    "jade": "*",
+    "passport":"*"
   },
   "subdomain": "website-watcher",
   "engines": {
-    "node": "0.10.x"
+    "node": "0.8.x"
   }
 }
