@@ -7,8 +7,16 @@ function create(req, res){
 		email:     req.body.email,
 		password:  req.body.password
 	};
-	console.log('created new user '+newUser.username);
-	res.redirect('/'+newUser.username);
+	user.addUser(newUser, function(error, data){
+		if (error) {
+			res.redirect('/');
+			console.error('Error creating user');
+		}
+		else {
+			res.redirect('/'+newUser.username);
+			console.log('created new user '+newUser.username);
+		}
+	});
 }
 
 function read(req, res){
