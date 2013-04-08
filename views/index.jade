@@ -2,7 +2,16 @@ extends layout
 
 block content
   h1 Website Watcher
-  form(action="/login", method="post")
-    input(id="username", name="username", placeholder="username", type="text")
-    input(id="password", name="password", placeholder="password", type="password")
-    input(id="submit",   name="submit", value="log in", type="submit")
+  h2 Log In
+  form(action="/login", method="post", id="login")
+    input(id="username",     name="username", placeholder="username", type="text")
+    input(id="password",     name="password", placeholder="password", type="password")
+    input(id="login_submit", name="login",    value="log in",         type="submit")
+  hr
+  form(action="/user", method="post", id="signup")
+    h2 Sign Up
+    input(id="username_new",  name="username",  placeholder="username",  type="text")
+    input(id="name_new",      name="full_name", placeholder="full name", type="text")
+    input(id="email_new",     name="email",     placeholder="email",     type="email")
+    input(id="password_new",  name="password",  placeholder="password",  type="password")
+    input(id="signup_submit", name="signup",   value="sign up",        type="submit")

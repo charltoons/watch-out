@@ -1,5 +1,12 @@
 function create(req, res){
-	res.redirect('/'+req.params.username);
+	var newUser = {
+		username:  req.body.username,
+		full_name: req.body.full_name,
+		email:     req.body.email,
+		password:  req.body.password
+	};
+	console.log('created new user '+newUser.username);
+	res.redirect('/'+newUser.username);
 }
 
 function read(req, res){

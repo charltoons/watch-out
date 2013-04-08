@@ -33,7 +33,7 @@ app.get('/', authenticate, routes.index);
 app.post('/login', authenticate, routes.index);
 
 //CRUD User
-app.post('/:username', authenticate, user.create);
+app.post('/user', authenticate, user.create);
 app.get('/:username', authenticate, user.read);
 app.put('/:username', authenticate, user.update);
 app.delete('/:username', authenticate, user.remove);
