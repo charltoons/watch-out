@@ -1,3 +1,5 @@
+var user = require('../models/user');
+
 function create(req, res){
 	var newUser = {
 		username:  req.body.username,

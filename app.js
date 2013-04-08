@@ -9,6 +9,7 @@ var express = require('express')
   , website = require('./routes/website')
   , http = require('http')
   , passport = require('passport')
+  , dbObj
   , path = require('path');
 
 var app = express();

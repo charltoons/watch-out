@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "3.0.3",
     "jade": "*",
-    "passport":"*"
+    "passport":"*",
+    "mongojs":"*"
   },
   "subdomain": "website-watcher",
   "engines": {
