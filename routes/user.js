@@ -20,9 +20,15 @@ function create(req, res){
 }
 
 function read(req, res){
-	var page = {};
-	page.username = req.params.username;
-	res.render('user', page);
+	user.getUser(req.params.username, function(error, user){
+		if (error) {
+			res.redirect('/');
+			console.error('Error getting user '+req.params.username);
+		}
+		else {
+			res.render('user', user);
+		}
+	});
 }
 
 function update(req, res){

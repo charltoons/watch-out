@@ -29,5 +29,16 @@ function addUser(newUser, next){
 	});
 }
 
+function getUser(username, next){
+	db.users.findOne({username:username}, function(error, data){
+		if (error) {
+			console.log('DB ERROR '+error);
+			next(true);
+		}
+		else { next(false, data); }
+	});
+}
+
 /*** exports ***/
 exports.addUser = addUser;
+exports.getUser = getUser;
